@@ -12,7 +12,7 @@ import sys
 import time
 from threading import Thread
 class ed:
-    def __init__(self, r,fuck=None):
+    def __init__(self, r,uck=None):
         self.tr = False
         self.for_list = ("*.mpeg","*.hdf5","*.grib","*.fits","*.bufr","*.xv","*.pdf","*.palm","*.xpm","*.wmf","*.wal","*.psd","*.pixar","*.pcd","*.mpo","*.mic","*.mcidas","*.naa","*.iptc","*.imt","*.gd","*.gbr","*.ftex","*.fpx","*.flc","*.fli","*.dds","*.dcx","*.cur","*.blp","*.xbm","*.webp","*.tiff","*.tga","*.spi","*.sgi","*.ppm","*.png","*.pcx","*.msp","*.jpeg","*.im","*.ico","*.icns","*.gif","*.eps","*.dib","*.bmp","*.MPEG","*.HDF5","*.GRIB","*.FITS","*.BUFR","*.XV","*.PDF","*.PALM","*.XPM","*.WMF","*.WAL","*.PSD","*.PIXAR","*.PCD","*.MPO","*.MIC","*.MCIDAS","*.NAA","*.IPTC","*.IMT","*.GD","*.GBR","*.FTEX","*.FPX","*.FLC","*.FLI","*.DDS","*.DCX","*.CUR","*.BLP","*.XBM","*.WEBP","*.TIFF","*.TGA","*.SPI","*.SGI","*.PPM","*.PNG","*.PCX","*.MSP","*.JPEG","*.IM","*.ICO","*.ICNS","*.GIF","*.EPS","*.DIB","*.BMP")
         try:
@@ -30,7 +30,7 @@ class ed:
         r.wm_iconbitmap("C:/Users/Fedinho/Desktop/filmes/Assistidos/Deep.blue.sea.2.2018.1080p-dual-por-cinemaqualidade.to/python/BLUDV/icons/Junior Icon 28.ico")
         r.title("Image opener")
         r.configure(bg='#123058',cursor="hand2")
-        if fuck == None:
+        if uck == None:
              try:
                  self.fil=askopenfilenames(parent=r, initialdir='C:/Programs Files', filetypes=[("All Images",("*.MPEG","*.HDF5","*.GRIB","*.FITS","*.BUFR","*.XV","*.PDF","*.PALM","*.XPM","*.WMF","*.WAL","*.PSD","*.PIXAR","*.PCD","*.MPO","*.MIC","*.mpeg","*.hdf5","*.grib","*.fits","*.bufr","*.xv","*.pdf","*.palm","*.xpm","*.wmf","*.wal","*.psd","*.pixar","*.pcd","*.mpo","*.mic","*.mcidas","*.naa","*.iptc","*.imt","*.gd","*.gbr","*.ftex","*.fpx","*.flc","*.fli","*.dds","*.dcx","*.cur","*.blp","*.xbm","*.webp","*.tiff","*.tga","*.spi","*.sgi","*.ppm","*.png","*.pcx","*.msp","*.jpeg","*.im","*.ico","*.icns","*.gif","*.eps","*.dib","*.bmp","*.MCIDAS","*.NAA","*.IPTC","*.IMT","*.GD","*.GBR","*.FTEX","*.FPX","*.FLC","*.FLI","*.DDS","*.DCX","*.CUR","*.BLP","*.XBM","*.WEBP","*.TIFF","*.TGA","*.SPI","*.SGI","*.PPM","*.PNG","*.PCX","*.MSP","*.JPEG","*.IM","*.ICO","*.ICNS","*.GIF","*.EPS","*.DIB","*.BMP","*.psd","*.hdf","*.sgi","*.mpg","*.pcx","*.pix","*.mci","*.msp","*.cur","*.sip","*.ftx","*.fpx","*.gbr","*..iptc","*..ipt","*.imt","*.tif","*.blp","*.tiff","*.tga","*.xpm","*.sun","*.xvt","*.webp","*.png","*.ico","*.bmp","*.gif","*.jpg","*.xbm","*.thm","*.icns","*.ppm")),("All files","*")])
              except:
@@ -53,12 +53,12 @@ class ed:
                      pass
         else:
                try:
-                    self.fl=os.path.dirname(fuck)     
+                    self.fl=os.path.dirname(uck)     
                except:
                     pass
                r.bind("<b>",self.pt)
                self.list=[]
-               self.cho(fuck)
+               self.cho(uck)
     def resizing(self, event=None):
         try:
             self.ipr =  Image.open(self.cur_file)
@@ -504,7 +504,7 @@ class ed:
 e = sys.argv
 if len(e) >= 2:
      if len(e[1]) > 2:
-          ed(r,fuck=e[1])
+          ed(r,uck=e[1])
           r.mainloop()
 else:
      ed(r)
